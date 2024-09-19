@@ -72,7 +72,8 @@ class FullHeightPlayerTopControls extends StatelessWidget with WatchItMixin {
             active: active,
             color: iconColor,
           ),
-          if (audio?.audioType == AudioType.podcast)
+          if ((audio?.audioType == AudioType.podcast) ||
+              (audio?.audioType == AudioType.local))
             PlaybackRateButton(
               active: active,
               color: iconColor,
